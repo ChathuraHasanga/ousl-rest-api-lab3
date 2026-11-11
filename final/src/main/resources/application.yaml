@@ -1,0 +1,25 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: final
+  datasource:
+    url: jdbc:postgrasql://${DB_HOT:localhost}:5432/sb_dbsslmode=require
+    username: ${DB_UER:postgres}
+    password: ${DB_PASS:12345678}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+    endpoint:
+      health:
+        show-details: always
+
