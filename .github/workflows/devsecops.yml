@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: .final
+        working-directory: final
 
     steps:
       - name: Checkout Code
